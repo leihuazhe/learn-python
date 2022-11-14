@@ -1,3 +1,4 @@
+import threading
 import unittest
 
 names = ['maple', 'ray', 'may', 'yang']
@@ -44,8 +45,34 @@ print(res)
 # [{'name': 'jason', 'dob': '2000-01-01', 'gender': 'male'},
 #  {'name': 'mike', 'dob': '1999-01-01', 'gender': 'male'},
 #  {'name': 'nancy', 'dob': '2001-02-01', 'gender': 'female'}]
+i = 3
+i = i + 1
+
+# , trailing commas 要换行,不能直接跟着 ) ] }.
+FILES = [
+    'setup.cfg',
+    'tox.ini',
+]
 
 
+# l,O,I
+def munge(input: bool) -> int:
+    # threading.Thread
+    return input.__hash__() + 2
+
+
+def test_for_assignment():
+    attributes = ['name', 'dob', 'gender']
+    values = [
+        ['jason', '2000-01-01', 'male'],
+        ['mike', '1999-01-01', 'male'],
+        ['nancy', '2001-02-01', 'female']
+    ]
+    # What is the zip used for?
+    print([zip(attributes, value) for value in values])
+
+    res = [dict(zip(attributes, value)) for value in values]
+    print(res)
 
 
 class TestDict(unittest.TestCase):

@@ -1,5 +1,5 @@
 git pull origin master
-git pull giteee  master || true
+git pull giteee master  || true
 date +"%Y-%m-%d %T"
 git add .
 git commit -am "Reserved, time: $date"

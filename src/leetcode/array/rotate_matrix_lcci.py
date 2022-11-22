@@ -7,7 +7,14 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        matrix[:] = zip(*matrix[::-1])
+        # matrix[:] = zip(*matrix[::-1])
+
+
+
+
+
+
+
 
 
 matrix = [[1, 3], [2, 4], [3, 6]]

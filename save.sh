@@ -4,10 +4,10 @@ git commit -am "Reserved, time: $(date)"
 
 sleep 1
 
-git pull --rebase origin master
+git pull --rebase origin master  || true
 git pull --rebase giteee master  || true
 
 sleep 1
 
-git push origin master
+git push origin master || true
 git push giteee master || true
